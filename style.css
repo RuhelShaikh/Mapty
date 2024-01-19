@@ -83,11 +83,30 @@ a:visited {
 .workout--cycling {
   border-left: 5px solid var(--color-brand--1);
 }
+.workout__header {
+  display: grid;
+  grid-template-columns: 1fr auto; /* Adjust column sizes as needed */
+  align-items: baseline;
+  grid-column: 1 / -1;
+}
 
 .workout__title {
   font-size: 1.7rem;
   font-weight: 600;
-  grid-column: 1 / -1;
+  margin: 0; /* Remove default margin */
+}
+
+.delete-button {
+  background-color: #ff4136;
+  color: #fff;
+  padding: 2px 2px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
 }
 
 .workout__details {
@@ -99,6 +118,13 @@ a:visited {
   font-size: 1.8rem;
   margin-right: 0.2rem;
   height: 0.28rem;
+}
+
+.delete-icon {
+  display: inline-block; /* Ensure the icon is treated as a block element */
+
+  height: 2.2rem; /* Adjust the height to make it more visible, change as needed */
+  width: auto;
 }
 
 .workout__value {
